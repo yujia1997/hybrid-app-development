@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片轮播</title>
+    <script>
+        function animate(obj,json,callback){
+            clearInterval(obj.timer)
+            obj.timer=setInterval(function(){
+                var isStop=true;//标志位
+                for(var attr in json){
+                    var now=0;
+                    if(attr=='opacity'){
+                        now=parseInt(getStyle(obj,attr)*100);
+                    }
+                    else{
+                        now=parseInt(getStyle(obj,attr));
+                    }
+                    var speed=(json[attr]-now)/6;
+                    speed=speed>0?Math.ceil(speed):Math.floor(speed);
+                    var current=now+speed;
+                    if(attr=='opacity'){
+                        obj.style.opacity=current/100;
+                    }
+                    else{
+                        obj.style[attr]=current+"px'";
+                    }
+                    if(json[attr]!==current){
+                        isStop=false;
+                    }
+                }
+                if(isStop){
+                    clearInterval(obj.timer);
+                    callback&&callback();
+                }
+            },30)
+        }
+    </script>
+    <style>
+        *{
+			padding:0px;
+			margin:0px;
+		}
+        .wrap{
+			width:1200px;
+			height:397px;
+			margin:70px auto;
+			overflow:hidden;
+			position:relative;
+			z-index:1;
+		}
+		.wrap a{
+			display:none;
+		}
+        .bottom{
+			width:1002px;
+			height:73px;
+			background:url(image/bg.png);
+			position:absolute;
+			bottom:0;
+			left:99px;
+		}
+		.bottom>span{
+			width:50px;
+			height:73px;
+			line-height:73px;
+			text-align:center;
+			color:#fff;
+			font-size:25px;
+			float:left;
+			cursor:pointer;
+		}
+    </style>
+</head>
+<body>
+     <div class="wrap">
+            <a href="#" style="display:block;"><img src="image/0.jpg"></a>
+            <a href="#"><img src="image/1.jpg"></a>
+            <a href="#"><img src="image/2.jpg"></a>
+            <a href="#"><img src="image/3.gif"></a>
+            <a href="#"><img src="image/4.jpg"></a>
+            <a href="#"><img src="image/5.jpg"></a>
+            <a href="#"><img src="image/6.jpg"></a>
+            <a href="#"><img src="image/7.jpg"></a>
+            <a href="#"><img src="image/8.jpg"></a>
+        <div class="bottom">
+            <span id="prev"><</span>
+            <span id="next">></span>
+        </div>
+    </div>
+</body>
+<script>
+        var wrap=document.getElementsByClassName("wrap")[0];
+        var imgs=wrap.getElementsByTagName("a");
+        var prev=document.getElementById("prev");
+        var next=document.getElementById("next");
+        var i=0;
+        function imgTab(){
+            imgs[i%8].style.display="none";
+            i++
+            imgs[i%8].style.display="block";
+        }
+        var timer=setInterval(imgTab,3000);
+        wrap.onmouseover=function(){
+            clearInterval(timer)
+        }
+        wrap.onmouseout=function(){
+            timer=setInterval(imgTab,3000);
+        }
+        prev.onclick=function(){
+            imgs[i%8].style.display="none";
+            i--;
+            if(i<0){
+                i=7;
+            }
+            imgs[i%8].style.display="block";
+        }
+        next.onclick=function(){
+            imgTab();
+        }
+    </script>
+</html>
