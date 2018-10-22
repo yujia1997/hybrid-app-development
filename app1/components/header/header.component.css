@@ -1,0 +1,28 @@
+nav{
+    height: 50px;
+    background-color:gainsboro;
+}
+.nav{
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 50px;
+    padding-left:500px;
+}
+.nav li{
+    float: left;
+    margin: 0 20px;
+    cursor: pointer;
+}
+.nav li a{
+    color:black;
+}
+#q{
+    line-height: 25px;
+    margin-top:12px;
+}
+#logo{
+    height:30px;
+    float:left;
+    margin-top:6px;
+    margin-left:180px;
+}

@@ -1,0 +1,12 @@
+.left{
+    float:left;
+    margin-right:0px;
+    margin-top:30px;
+}
+.right{
+    float:left;
+    margin-top:30px;
+}
+.top{
+    margin-left:160px;
+}

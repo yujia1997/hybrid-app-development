@@ -1,0 +1,57 @@
+.left{
+    margin-left:200px;
+    float:left;
+}
+#xiuzhi{
+    width:200px;
+    height:200px;
+    margin-left:-60px;
+    margin-top:30px;
+}
+.count{
+    margin-top:10px;
+}
+.count1{
+    color:black;
+    font-weight:20px;
+    font-size: 20px;
+    margin-left:-10px;
+}
+.count2{
+    color:black;
+    margin-left:-18px;
+}
+.bottom a{
+    color:black;
+    font-size:18px;
+}
+.bottom a:hover{
+    background-color:peachpuff;
+    color:orangered;
+}
+.bottom{
+    margin-top:20px;
+    margin-left:-18px;
+}
+.right{
+    float:left;
+}
+.right li a{
+    color:black;
+}
+.right li{
+    float: left;
+    cursor: pointer;
+    margin-top:50px;
+    margin-left:80px;
+}
+#q{
+    line-height: 25px;
+    margin-top:12px;
+    float:left;
+}
+.right1{
+    float:left;
+    margin-top:-35px;
+    margin-left:500px;
+}
