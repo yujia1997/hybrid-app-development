@@ -1,0 +1,38 @@
+<ion-header text-center no-border>
+  <ion-navbar>
+    <ion-searchbar (ionInput)="getItems($event)" placeholder="双12特惠好物超低价" class="search">
+    </ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <img src="assets/imgs/store.png" alt="" style="display:block;margin-top:15px;">
+  </div>
+  <ul class="navList">
+    <li class="first">客厅</li>
+    <li>卧室</li>
+    <li>餐厅</li>
+    <li>书房</li>
+    <li>门厅</li>
+  </ul>
+  <div class="subtitle">
+    <p text-center>—— 沙发 ——</p>
+  </div>
+  <ul class="store">
+    <li>
+      <img src="assets/imgs/store3.png" alt="">
+      <p text-center>罗得蒙简约植绒布艺沙发</p>
+      <p text-center id="jiage">RMB 6500</p>
+    </li>
+    <li>
+      <img src="assets/imgs/store1.png" alt="">
+    </li>
+    <li>
+      <img src="assets/imgs/store2.png" alt="">
+    </li>
+    <li>
+      <img src="assets/imgs/store4.png" alt="">
+    </li>
+  </ul>
+</ion-content>

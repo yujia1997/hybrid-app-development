@@ -1,0 +1,19 @@
+page-add {
+    .cricle{
+        padding: 0;
+       margin-left: 35px;
+        img{
+            width: 100%;
+        }
+        li{
+            position: relative;
+            width: 30%;
+            float: left;
+            margin:5px 5px 5px 8%;
+            padding:15px 5px;
+        }
+    }
+    .one{
+        background-color: #ffdb2c;
+    }
+}

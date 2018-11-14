@@ -1,0 +1,58 @@
+page-b {
+  .head{
+      margin-top: 0 !important;
+  }
+  #touxiang{
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+  }
+  .nav{
+      margin-top: -170px;
+  }
+  .nav p{
+      font-size: 20px;
+      margin-top: 8px;
+  }
+  .list{
+    height: 30px;
+    line-height: 30px;
+  }
+  .list1{
+     
+    height: 30px;
+    line-height: 30px;
+      float:left;
+  margin-left: 20px;
+}
+  .list2{
+      height: 30px;
+      line-height: 30px;
+      float:left;
+      margin-left: 180px;
+  }
+  .list3{
+    padding:0;
+    img{
+        width:100%;
+    }
+    li{
+        position: relative;
+        width:33%;
+        float: left;
+        margin: 0;
+    }
+  }
+  .list4{
+    padding: 0;
+    img{
+        width: 100%;
+    }
+    li{
+        position: relative;
+        width: 50%;
+        float: left;
+        margin: 0 0 3px 0;
+    }
+  }
+}
